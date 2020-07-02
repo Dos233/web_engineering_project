@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+<title>Sintok Monitoring and Surveiliance Webapp</title>
+<link rel="icon" type="image/x-icon" href="logo.png">
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+
+
+<script type="text/javascript">
+    window.onload=function(){
+        btn_login_system.onclick=function(){
+            var pwd = document.getElementById('password').value;
+        var mail = document.getElementById("email").value;
+        var reg3 =new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$");
+        if (pwd.length < 6&&pwd.length!=0)
+    {
+    alert("Password length must be more than 6 characters");
+    return false;
+    }
+    if(!reg3.test(mail)){ 
+	alert("Email Format Is Not Correct!");
+	return false;
+	}
+	
+	
+        if (pwd.length == 0) 
+        { 
+        alert('Please complete');
+        return false;
+        }
+        
+
+    }
+        
+        btn_sign_up.onclick=function(){
+            var pwd = document.getElementById('password_1').value;
+        var mail = document.getElementById("email_1").value;
+        var name = document.getElementById('name_1').value;
+        var reg3 =new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$");
+        if (pwd.length < 6&&pwd.length!=0)
+    {
+    alert("Password length must be more than 6 characters");
+    return false;
+    }
+    if(!reg3.test(mail)){ 
+	alert("Email Format Is Not Correct!");
+	return false;
+	}
+	
+	
+        if (pwd.length == 0) 
+        { 
+        alert('Please complete');
+        return false;
+        }
+        
+        if (name.length == 0) 
+        { 
+        alert('Please complete'); 
+        return false;
+        }
+
+    }
+    }
+</script>
+
+
+</head>
+<body>
+
+<div class="cotn_principal">
+  <div class="cont_centrar">
+    <div class="cont_login">
+      <div class="cont_info_log_sign_up">
+        <div class="col_md_login">
+          <div class="cont_ba_opcitiy">
+            <h2>LOGIN</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+            <button class="btn_login" onClick="cambiar_login()">LOGIN</button>
+          </div>
+        </div>
+        <div class="col_md_sign_up">
+          <div class="cont_ba_opcitiy">
+            <h2>SIGN UP</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+            <button class="btn_sign_up" onClick="cambiar_sign_up()">SIGN UP</button>
+          </div>
+        </div>
+      </div>
+      <div class="cont_back_info">
+        <div class="cont_img_back_grey"> <img src="po.jpg" alt="" /> </div>
+      </div>
+      <div class="cont_forms" >
+        <div class="cont_img_back_"> <img src="po.jpg" alt="" /> </div>
+        <div class="cont_form_login"> <a href="#" onClick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
+
+          <h2>LOGIN</h2>
+
+          <form action="http://lossyhome.xyz/login_user_web.php" method="post">
+          <input id="email" type="text" placeholder="Email" name="email" />
+          <input id="password" type="password" placeholder="Password" name="password" />
+          <button id="btn_login_system" class="btn_login" onClick="cambiar_login()">LOGIN</button>
+          </form>
+        </div>
+        <div class="cont_form_sign_up"> <a href="#" ><i class="material-icons">&#xE5C4;</i></a>
+
+          <h2>SIGN UP</h2>
+
+          <form action="http://lossyhome.xyz/register_user_web.php" method="post">
+          <input id="email_1" type="text" placeholder="email" name="email" />
+          <input id="name_1" type="text" placeholder="name" name="name" />
+          <input id="password_1" type="password" placeholder="password" name="password" />
+          <button id="btn_sign_up" class="btn_sign_up">SIGN UP</button>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/index.js"></script>
+</body>
+</html>
+
