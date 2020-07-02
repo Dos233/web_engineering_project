@@ -43,7 +43,7 @@ try{
     //Content
     $mail->isHTML(true);                                  
     $mail->Subject = 'Your email have registered successfully!';
-    $mail->Body    = '<h1>You have registered !</h1>'.'<div>Your email: <div>'.$email.'<p><p>' .'<div>Registered date: <div>'. date('Y-m-d H:i:s');
+    $mail->Body    = '<h1>You have registered !</h1>'.'<div>Your email: <div>'.$email.'<p><p>' .'<div>Registered date: <div>'.'GMT+0: '.date('Y-m-d H:i:s');
 
     $mail->send();
 }catch (Exception $e) {
